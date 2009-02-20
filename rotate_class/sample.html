@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Shibukawa Yoshiki, yoshiki@shibu.jp" />
+<style>
+.check_box.checked {
+  background-image: url(checkbox.png);
+  background-repeat: no-repeat;
+  background-position: 0 -16px;
+  height: 16px;
+  width: 16px;
+}
+
+.check_box.checked:hover {
+  background-image: url(checkbox.png);
+  background-repeat: no-repeat;
+  background-position: 0 0px;
+  height: 16px;
+  width: 16px;
+}
+
+.check_box {
+  background-image: url(checkbox.png);
+  background-repeat: no-repeat;
+  background-position: 0 -48px;
+  height: 16px;
+  width: 16px;
+}
+
+.check_box:hover {
+  background-image: url(checkbox.png);
+  background-repeat: no-repeat;
+  background-position: 0 -32px;
+  height: 16px;
+  width: 16px;
+}
+
+.check_box.doing {
+  background-image: url(checkbox.png);
+  background-repeat: no-repeat;
+  background-position: 0 -80px;
+  height: 16px;
+  width: 16px;
+}
+
+.check_box.doing:hover {
+  background-image: url(checkbox.png);
+  background-repeat: no-repeat;
+  background-position: 0 -64px;
+  height: 16px;
+  width: 16px;
+}
+</style>
+<title>GTD+D</title>
+<script type="text/javascript" src="../jquery-1.3.min.js"></script>
+<script type="text/javascript" src="rotate_class.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".check_box").click(function() {
+        $(this).rotateClass(null, "doing", "checked");
+    });
+});
+</script>
+</head>
+<body>
+  <h3>Rotate in 3 states(including null)</h3>
+  <ul>
+    <li><img class="check_box" src="null.gif"/>Buy Milk</li>
+    <li><img class="check_box" src="null.gif"/>Go to a gas station</li>
+    <li><img class="check_box" src="null.gif"/>Send E-mail</li>
+  </ul>
+</body>
+</html>
